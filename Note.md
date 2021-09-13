@@ -1,1 +1,2 @@
-hello world
+-follow design in figma
+-use database from openweather
