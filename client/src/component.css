@@ -1,17 +1,27 @@
 .placeholeder{
     position: absolute;
+    height: auto;
+    border-radius: 50px;
+    margin-top: 1.875em;
+    margin-bottom: 1.875em; 
+    background-color: red;
+}
+
+.placeholeder.right {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-left: 1.875em;
+ 
+    width: 47%;
+}
+
+.placeholeder.left {
     top: 0;
     bottom: 0;
     right: 0;
-    left: 0;
-    margin-left: 1.875em;
-    margin-top: 1.875em;
-    margin-bottom: 1.875em;
-    width: 60%;
-    height: auto;
-
-    border-radius: 50px;
-    background-color: red;
+    margin-right: 1.875em;
+    width: 47%;
 }
 
 .top-bar {
@@ -29,14 +39,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    height: 30%;
-    margin: 0.2083em;
-    margin-top: 0.625em;
-    border-radius:0.4167em;
+    
     font-size:48px;
     text-align: center;
 }
+
+.component.weather{
+    margin: 0.2083em;
+    margin-top: 0.625em;
+    border-radius:0.4167em;
+    width: 30%;
+    height: 30%;
+}
+
+.component.polution{
+    margin:0.13889em;
+    border-radius:0.556em;
+    width: 30%;
+    height: 30%;
+    font-size:36px
+}
+
 .place{
     background-color:none;
     justify-content: center;
@@ -59,7 +82,12 @@
     font-size: 24px
 }
 
-.unit{
-    font-size: 36px;
+.unit.weather{
+    font-size: 30px;
+    text-indent: 0.278em;
+}
+
+.unit.polution{
+    font-size: 30px;
     text-indent: 0.278em;
 }

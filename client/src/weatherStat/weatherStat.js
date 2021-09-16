@@ -1,13 +1,13 @@
-import './weatherStat.css';
+import '../component.css';
 import Component from './weatherComponent.js';
 
-function weatherStat({Weather}) {
+function weatherStat({weathers}) {
     
     
     return (
-        <div className="placeholeder">
+        <div className="placeholeder right">
             <div className="top-bar">CURRENT WEATHER</div>
-                <Component data={Weather}/>
+                <Component data={weathers}/>
         </div>
     )
 }
