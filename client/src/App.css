@@ -1,5 +1,26 @@
-.container {
-  background-color: azure;
-  width: 80%;
-  height: 80%;
+*{
+  margin: 0;
+  /* background-color:azure */
+}
+
+.bc {
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  background-color: pink;
+}
+
+.console {
+  background-color:bisque;
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+  left: 0;
+  
+  height: 70%;
 }
