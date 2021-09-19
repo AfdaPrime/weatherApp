@@ -2,6 +2,7 @@
 import './App.css';
 import Weather from './weatherStat/weatherStat.js';
 import Air from './airPolution/airPolution';
+import Carousel from './weatherCarousel/weatherCarousel.js'
 
 const axios = require('axios');
 
@@ -15,17 +16,7 @@ const polutionURL = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${
 
 const weathers = axios.get(weatherURL).then(res =>{
         
-  const data = res.data.hourly[0]
-  // console.log(data)
-
-  return{
-      temp:data.temp,
-      feel_like:data.feels_like,
-      pressure:data.pressure,
-      humidity:data.humidity,
-      uvi:data.uvi,
-      visibility:data.visibility,
-  }
+  return res
 
 }).catch(err =>{
   console.log(err);
@@ -36,10 +27,7 @@ const polution = axios.get(polutionURL).then(res=>{
   const data = res.data.list[0].components
 
   return data
-  // return{
-  //   CO:
-  // }
-
+  
 }).catch((err)=>{
   console.error(err)
 })
@@ -49,6 +37,7 @@ function App() {
 
   return (
     <div className="bc">
+      <Carousel weathers={weathers}/>
       <div className="console">
         <Weather weathers={weathers}/>
         <Air polution={polution}/>

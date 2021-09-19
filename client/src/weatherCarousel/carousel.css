@@ -1,0 +1,11 @@
+img{
+    width:40%;
+    /* background-color:white; */
+    margin-left: 100px;
+}
+
+.description{
+    text-align:center;
+    font-size: 24px;
+    margin-bottom: 25px;
+}

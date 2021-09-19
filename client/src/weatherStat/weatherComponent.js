@@ -19,13 +19,23 @@ function WeatherComponent({data}) {
 
     data.then((res) =>{
         
-        setWeather(res)
+        const data = res.data.hourly[0]
+        // console.log(data)
+      
+        setWeather({
+            temp:data.temp,
+            feel_like:data.feels_like,
+            pressure:data.pressure,
+            humidity:data.humidity,
+            uvi:data.uvi,
+            visibility:data.visibility,
+        })
 
     }).catch((err) =>{
         console.log(err);
     })
 
-    }, );
+    }, [data]);
 
         
 
