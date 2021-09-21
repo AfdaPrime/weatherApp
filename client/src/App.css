@@ -1,28 +1,51 @@
 *{
   margin: 0;
-  /* background-color:azure */
+  font-family:'Franklin Gothic', 'Arial Narrow', Arial, sans-serif
 }
-
-.bc {
-  
-  position: absolute;
+.bc{
+  position:absolute;
   top: 0;
-  bottom: 0;
-  right: 0;
   left: 0;
-
-  background-color: pink;
+  right: 0;
+  bottom: 0;
+  background-color:#9AD1D4
 }
 
-.console {
-  background-color:bisque;
-  position: absolute;
-
-  bottom: 0;
-  right: 0;
-  left: 0;
-  
-  height: 70%;
-  
+.console{
+  width:auto;
+  bottom:0;
+  background-color:#234971;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+@media only screen and (min-width: 992px){
+  .console{
+    position:absolute;
+    left:0;
+    right: 0;
+    bottom:0;
+    width:auto;
+    height:65%;
+    background-color:#234971;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-height: 1365px){
+  .console{
+    position:absolute;
+    left:0;
+    right: 0;
+    bottom:0;
+    width:auto;
+    height:75%;
+    background-color:#234971;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -40,13 +40,13 @@ function WeatherComponent({data}) {
         
 
     return (
-        <div className="place">
-            <div className="component weather"><p className="label">Temperature:</p>{weather.temp}<p className="unit weather">°C</p></div>
-            <div className="component weather"><p className="label">Feels Like:</p>{weather.feel_like}<p className="unit weather">°C</p></div>
-            <div className="component weather"><p className="label">Pressure:</p>{weather.pressure}<p className="unit weather">hPa</p></div>
-            <div className="component weather"><p className="label">Humidity:</p>{weather.humidity}<p className="unit weather">%</p></div>
-            <div className="component weather"><p className="label">UV Index:</p>{weather.uvi}</div>
-            <div className="component weather"><p className="label">Visibility:</p>{weather.visibility}<p className="unit weather">m</p></div>
+        <div className="place weather">
+            <div className="component weather"><p className="label weather">Temperature:</p><p>{weather.temp} °C</p></div>
+            <div className="component weather"><p className="label weather">Feels Like:</p><p>{weather.feel_like} °C</p></div>
+            <div className="component weather"><p className="label weather">Pressure:</p><p>{weather.pressure} hPa</p></div>
+            <div className="component weather"><p className="label weather">Humidity:</p><p>{weather.humidity} %</p></div>
+            <div className="component weather"><p className="label weather">UV Index:</p>{weather.uvi}</div>
+            <div className="component weather"><p className="label weather">Visibility:</p><p>{weather.visibility} m</p></div>
         </div>
     )
 }

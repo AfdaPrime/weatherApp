@@ -5,7 +5,7 @@ function weatherStat({weathers}) {
     
     
     return (
-        <div className="placeholeder right">
+        <div className="placeholder right">
             <div className="top-bar">CURRENT WEATHER</div>
                 <Component data={weathers}/>
         </div>

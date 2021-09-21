@@ -15,7 +15,7 @@ const weatherURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitu
 const polutionURL = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${logtitude}&appid=${auth}`
 
 const weathers = axios.get(weatherURL).then(res =>{
-        
+  
   return res
 
 }).catch(err =>{

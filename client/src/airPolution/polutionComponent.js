@@ -25,14 +25,14 @@ function PolutionComponent({data}) {
 
     return (
         <div className='place polution'>
-            <div className="component polution"><p className="label polution">Carbon Monoxide:</p>{component.co}<p className="unit polution">μg/m3</p></div>
-            <div className="component polution"><p className="label polution">Ammonia:</p>{component.nh3}<p className="unit polution">μg/m3</p></div>
-            <div className="component polution"><p className="label polution">Nitrogen Monoxide:</p>{component.no}<p className="unit polution">μg/m3</p></div>
-            <div className="component polution"><p className="label polution">Nitrogen Dioxide:</p>{component.no2}<p className="unit polution">μg/m3</p></div>
-            <div className="component polution"><p className="label polution">Ozone:</p>{component.o3}<p className="unit polution">μg/m3</p></div>
-            <div className="component polution"><p className="label polution">Fine Particles :</p>{component.pm2_5}<p className="unit polution">μg/m3</p></div>
-            <div className="component polution"><p className="label polution">Coarse Particulate :</p>{component.pm10}<p className="unit polution">μg/m3</p></div>
-            <div className="component polution"><p className="label polution">Sulphur Dioxide:</p>{component.so2}<p className="unit polution">μg/m3</p></div>
+            <div className="component polution"><p className="label polution">Carbon Monoxide:</p><p className="unit polution">{component.co} μg/m3</p></div>
+            <div className="component polution"><p className="label polution">Sulphur Dioxide:</p><p className="unit polution">{component.so2} μg/m3</p></div>
+            <div className="component polution"><p className="label polution">Nitrogen Monoxide:</p><p className="unit polution">{component.no} μg/m3</p></div>
+            <div className="component polution"><p className="label polution">Nitrogen Dioxide:</p><p className="unit polution">{component.no2} μg/m3</p></div>
+            <div className="component polution"><p className="label polution">Coarse Particulate:</p><p className="unit polution">{component.pm10} μg/m3</p></div>
+            <div className="component polution"><p className="label polution">Fine Particles:</p><p className="unit polution">{component.pm2_5} μg/m3</p></div>
+            <div className="component polution"><p className="label polution">Ozone:</p><p className="unit polution">{component.o3} μg/m3</p></div>
+            <div className="component polution"><p className="label polution">Ammonia:</p><p className="unit polution">{component.nh3} μg/m3</p></div>
         </div>
     )
 }

@@ -11,13 +11,13 @@ slidesToSlide: 5 // optional, default to 1.
 },
 tablet: {
 breakpoint: { max: 1024, min: 464 },
-items: 2,
-slidesToSlide: 2 // optional, default to 1.
+items: 4,
+slidesToSlide: 4 // optional, default to 1.
 },
 mobile: {
 breakpoint: { max: 464, min: 0 },
-items: 1,
-slidesToSlide: 1 // optional, default to 1.
+items: 3,
+slidesToSlide: 3 // optional, default to 1.
 }
 };
 
@@ -36,27 +36,39 @@ function WeatherCarousel({weathers}) {
 
         let day = date.getDate();
 
+        let month = String(date.getMonth()).length === 1 ? '0' + date.getMonth() : date.getMonth()
+
         let  hours = String(date.getHours()).length === 1 ? '0' + date.getHours() : date.getHours()
 
         let minutes = '0' + date.getMinutes();
 
-        return(day + '-' + hours + ':' + minutes.substr(-2) )
+        return(day + '/' + month + '-' + hours + ':' + minutes.substr(-2) )
     }
 
     const picture = (weatherId) =>{
-
+        console.log(weatherId)
         const id =String(weatherId).substr(0,1)
 
         if(id === '2'){
             return process.env.PUBLIC_URL+'/image/thunderstroms.png'
         }else if( id === '3' ){
             return process.env.PUBLIC_URL+'/image/drizzle.png'
+        }else if( weatherId === 500 || weatherId ===501){
+            return process.env.PUBLIC_URL+'/image/moderate-rain.png'
+        }else if( weatherId === 520 || weatherId ===521){
+            return process.env.PUBLIC_URL+'/image/showers-rain.png'
         }else if( id === '5' ){
-            return process.env.PUBLIC_URL+'/image/showers.png'
-        }else if( weatherId === '800'){
+            return process.env.PUBLIC_URL+'/image/heavy-rain.png'
+        }else if( weatherId === 800){
             return process.env.PUBLIC_URL+'/image/sunny.png'
-        }else{
+        }else if( weatherId === 801){
+            return process.env.PUBLIC_URL+'/image/clear-cloudy.png'
+        }else if( weatherId === 802){
+            return process.env.PUBLIC_URL+'/image/partly-cloudy.png'
+        }else if( weatherId === 803){
             return process.env.PUBLIC_URL+'/image/cloudy.png'
+        }else if( weatherId === 804){
+            return process.env.PUBLIC_URL+'/image/mostly-cloudy.png'
         }
             
 
@@ -74,7 +86,6 @@ function WeatherCarousel({weathers}) {
 
     }, [weathers])
  
-
     return (
         
         
@@ -100,49 +111,10 @@ function WeatherCarousel({weathers}) {
             return(
                 <div key={image.dt}>
                     <img src={picture(image.weather[0].id)} alt={image.weather[0].main}/>
-                    <p className="description">{image.weather[0].description}<br /> {time(image.dt)}</p>
+                    <p className="description">{(image.weather[0].description).toUpperCase()}<br /> {time(image.dt)}</p>
                 </div>
             );
         })}
-
-
-
-    {/* <div>
-        <img src={process.env.PUBLIC_URL+'/image/sunny.png'} alt='sunny' />
-        <p className="description">Heavy intensity rain <br /> 12.45pm</p>
-        
-    </div>
-    <div>
-    <img src={process.env.PUBLIC_URL+'/image/sunny.png'} alt='sunny' />
-    </div>
-    <div>
-    <img src={process.env.PUBLIC_URL+'/image/sunny.png'} alt='sunny' />
-    </div>
-    <div>
-        <img src={process.env.PUBLIC_URL+'/image/sunny.png'} alt='sunny' />
-    </div>
-    <div>
-    <img src={process.env.PUBLIC_URL+'/image/sunny.png'} alt='sunny' />
-    </div>
-    <div>
-    <img src={process.env.PUBLIC_URL+'/image/sunny.png'} alt='sunny' />
-    </div>
-    <div>
-    <img src={process.env.PUBLIC_URL+'/image/sunny.png'} alt='sunny' />
-    </div>
-    <div>
-    <img src={process.env.PUBLIC_URL+'/image/sunny.png'} alt='sunny' />
-    </div>
-    <div>
-    <img src={process.env.PUBLIC_URL+'/image/sunny.png'} alt='sunny' />
-    </div>
-    <div>
-    <img src={process.env.PUBLIC_URL+'/image/sunny.png'} alt='sunny' />
-    </div>
-    <div>Item 11</div>
-    <div>Item 12</div>
-    <div>Item 13</div>
-    <div>Item 14</div> */}
 
 
     </Carousel>
