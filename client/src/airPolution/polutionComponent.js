@@ -17,9 +17,7 @@ function PolutionComponent({data}) {
         
         data.then((res=>{
             setComponent(res)
-        })).catch((err) => {
-            console.error(err)
-        })
+        }))
 
     }, )
 
