@@ -24,9 +24,9 @@ const weathers = axios.get(weatherURL).then(res =>{
 
 const polution = axios.get(polutionURL).then(res=>{
   
-  const data = res.data.list[0].components
+  
 
-  return data
+  return res
   
 }).catch(err =>{
   console.log(err);
