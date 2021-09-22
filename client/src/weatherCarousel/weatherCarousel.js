@@ -46,7 +46,6 @@ function WeatherCarousel({weathers}) {
     }
 
     const picture = (weatherId) =>{
-        console.log(weatherId)
         const id =String(weatherId).substr(0,1)
 
         if(id === '2'){

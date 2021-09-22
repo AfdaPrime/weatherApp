@@ -16,8 +16,19 @@ function PolutionComponent({data}) {
     useEffect(() => {
         
         data.then((res=>{
-            setComponent(res)
-        }))
+            setComponent({
+                co:res.co,
+                nh3:res.nh3,
+                no:res.no,
+                no2:res.no2,
+                o3:res.o3,
+                pm2_5:res.pm2_5,
+                pm10:res.pm10,
+                so2:res.so2,
+            })
+        })).catch((err) => {
+            console.error(err)
+        })
 
     }, )
 
