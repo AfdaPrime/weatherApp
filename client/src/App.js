@@ -23,8 +23,6 @@ const weathers = axios.get(weatherURL).then(res =>{
 })
 
 const polution = axios.get(polutionURL).then(res=>{
-  
-  
 
   return res
   
@@ -39,8 +37,8 @@ function App() {
     <div className="bc">
       <Carousel weathers={weathers}/>
       <div className="console">
-        <Weather weathers={weathers}/>
         <Air polution={polution}/>
+        <Weather weathers={weathers}/>
       </div>
     </div>
   );

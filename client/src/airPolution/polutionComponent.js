@@ -16,8 +16,9 @@ function PolutionComponent({data}) {
     useEffect(() => {
         
         data.then((res=>{
-            console.log(res)
+            // console.log(res)
             const air = res.data.list[0].components
+            console.log(air)
             setPollution({
                 co:air.co,
                 nh3:air.nh3,
@@ -28,7 +29,9 @@ function PolutionComponent({data}) {
                 pm10:air.pm10,
                 so2:air.so2,
             })
-        }))
+        })).catch((err) => {
+            console.error(err)
+        })
 
     }, [data]);
 
