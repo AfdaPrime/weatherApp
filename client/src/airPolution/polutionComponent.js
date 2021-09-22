@@ -17,7 +17,7 @@ function PolutionComponent({data}) {
         
         data.then((res=>{
             // console.log(res)
-            const data = res.data.list[0].components
+            const data = res.list[0].components
             setComponent({
                 co:data.co,
                 nh3:data.nh3,
