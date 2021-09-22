@@ -28,9 +28,7 @@ function PolutionComponent({data}) {
                 pm10:air.pm10,
                 so2:air.so2,
             })
-        })).catch((err) => {
-            console.error(err)
-        })
+        }))
 
     }, )
 
