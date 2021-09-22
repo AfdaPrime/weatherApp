@@ -28,8 +28,6 @@ const polution = axios.get(polutionURL).then(res=>{
 
   return data
   
-}).catch((err)=>{
-  console.error(err)
 })
 
 function App() {
