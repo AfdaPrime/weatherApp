@@ -12,7 +12,7 @@ const part = 'current,minutely,daily,alerts'
 const units = 'metric'
 const auth = 'c0affc12bb66d292bbcd094cdbf99705'
 const weatherURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${logtitude}&exclude=${part}&units=${units}&appid=${auth}`
-const polutionURL = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${logtitude}&appid=${auth}`
+const polutionURL = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${logtitude}&appid=${auth}`
 
 const weathers = axios.get(weatherURL).then(res =>{
   
