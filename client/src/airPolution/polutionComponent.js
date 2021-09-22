@@ -17,16 +17,16 @@ function PolutionComponent({data}) {
         
         data.then((res=>{
             // console.log(res)
-            const data = res.list[0].components
+            const air = res.data.list[0].components
             setComponent({
-                co:data.co,
-                nh3:data.nh3,
-                no:data.no,
-                no2:data.no2,
-                o3:data.o3,
-                pm2_5:data.pm2_5,
-                pm10:data.pm10,
-                so2:data.so2,
+                co:air.co,
+                nh3:air.nh3,
+                no:air.no,
+                no2:air.no2,
+                o3:air.o3,
+                pm2_5:air.pm2_5,
+                pm10:air.pm10,
+                so2:air.so2,
             })
         })).catch((err) => {
             console.error(err)
